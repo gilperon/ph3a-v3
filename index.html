@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstrap Boilerplate</title>
+    
+   
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    
+  <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="./animations.css">
+
+
+     <link rel="stylesheet" href="https://www.ph3a.com.br/bundles/css?v=RrzA8tqQGPH_nT8O3o0B48_dUIa52A7KWTzzdzL9unA1">
+
+    
+
+  <style>
+    /* body{
+      background:linear-gradient(135deg, #000204, #282c2c) !important;
+         background:linear-gradient(185deg, #000204, #262929) !important;
+      overflow:initial !important;
+      overflow-x:hidden !important;
+    } */
+
+
+     body{
+      background:#fff !important;
+      overflow:initial !important;
+      overflow-x:hidden !important;
+    }
+
+    #canvas-wrapper {
+         /* background:linear-gradient(185deg, #000204, #262929) !important; */
+
+
+               background:linear-gradient(185deg, #000204, #262929) !important;
+      height: 100dvh;
+      overflow: hidden;
+      position: relative;
+      z-index:1;
+    }
+
+
+      /* Cover sobre o canvas */
+      #wrapper {
+        position: absolute; /* absoluto em relação ao body */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10; /* acima do canvas */
+        background:radial-gradient(circle at 50% 0,#ef444426 0%,#f973160d 30%,#0000 70%);
+        height: 100dvh;
+
+
+        
+      }
+
+
+
+
+       #canvas-container {
+        margin-top: 30%; 
+      }
+
+
+      #wrap-hero-cover{
+        color:#fff;
+        font-family: Poppins;
+        font-weight: 400;
+        margin-top:120px;
+      }
+
+      @media (min-width: 576px) {
+        #canvas-container {
+          margin-top: 130px; 
+        }
+
+         #wrap-hero-cover{
+          margin-top:135px;
+        }
+
+      }
+
+
+
+
+
+
+
+      .will-change-custom {
+          will-change: transform,opacity!important
+      }
+
+      .animate-appear {
+          animation: appear .5s ease-out!important
+      }
+
+      @keyframes appear {
+          0% {
+              opacity: 0;
+              transform: translateY(12px)
+          }
+
+          to {
+              opacity: 1;
+              transform: translateY(0)
+          }
+      }
+
+
+  
+
+    </style>
+</head>
+<body>
+
+  <script  src="./script.js"></script>
+
+
+  <div id="wrapper">
+
+    
+
+
+
+
+
+
+ <header id="header-wrap">
+    <nav id="desktop-menu" class="navbar" aria-label="Desktop Menu">
+
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center">
+                <!--Toggle-->
+                <button class="navbar-toggler d-flex d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <!--Logo-->
+                <a href="/"><img src="https://www.ph3a.com.br/Content/site/images/logo-ph3.webp" class="logo" alt="PH3A Logo" title="PH3A Site"></a>
+                <!--Links-->
+                <ul class="navbar-nav d-none d-md-flex flex-row">
+                    <li id="menu-home" class="active"><a href="/" data-i18n="menu.home">Início</a></li>
+                    <li id="menu-about"><a href="/home/about" data-i18n="menu.about">Sobre nós</a></li>
+                    <li id="menu-product" class="nav-item dropdown">
+                        <a class="v2-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="menu.product">
+                            Produtos
+                        </a>
+                        <div id="menu-optimized" class="dropdown-menu dropdown-menu-lg mindesktopwidth position-absolute">
+                            <div class="col-auto px-0" data-dropdown-content="">
+                                <div class="list-group list-group-flush d-flex flex-row w-100">
+                                    <div class="col-12">
+                                        <a href="/produto/busca" class="list-group-item list-group-item-action d-flex align-items-center p-0 py-3 px-md-4">
+                                            <span class="svg-icon-default svg-icon-databusca"></span>
+                                            <div class="drop-produtos w-100">
+                                                <span data-i18n="menu.categories.databusca">DataBusca</span>
+                                                <span data-i18n="menu.description.databusca">Solução de Big Data e Enriquecimento de Dados</span>
+                                            </div>
+                                        </a>
+                                        <a href="/produto/cob" class="list-group-item list-group-item-action d-flex align-items-center p-0 py-3 px-md-4">
+                                            <span class="svg-icon-default svg-icon-datacob"></span>
+                                            <div class="drop-produtos w-100">
+                                                <span data-i18n="menu.categories.datacob">DataCob</span>
+                                                <span data-i18n="menu.description.datacob">Solucão de Cobrança e Análise de Crédito</span>
+                                            </div>
+                                        </a>
+                                        <a href="/produto/fraud" class="list-group-item list-group-item-action d-flex align-items-center p-0 py-3 px-md-4">
+                                            <span class="svg-icon-default svg-icon-datafraud"></span>
+                                            <div class="drop-produtos w-100">
+                                                <span data-i18n="menu.categories.datafraud">DataFraud</span>
+                                                <span data-i18n="menu.description.datafraud">Sistema de Análise e Prevenção de Fraude</span>
+                                            </div>
+                                        </a>
+                                        <a href="/produto/tag" class="list-group-item list-group-item-action d-flex align-items-center p-0 py-3 px-md-4">
+                                            <span class="svg-icon-default svg-icon-datatag"></span>
+                                            <div class="drop-produtos w-100">
+                                                <span data-i18n="menu.categories.datatag">DataTag</span>
+                                                <span data-i18n="menu.description.datatag">Solução de Marketing e Vendas Digital</span>
+                                            </div>
+                                        </a>
+                                        <a href="/produto/affinity" class="list-group-item list-group-item-action d-flex align-items-center p-0 py-3 px-md-4">
+                                            <span class="svg-icon-default svg-icon-dataaffinity"></span>
+                                            <div class="drop-produtos w-100">
+                                                <span data-i18n="menu.categories.dataaffinity">DataAffinity</span>
+                                                <span data-i18n="menu.description.dataaffinity">Solução de Modelagem e Similaridade de Dados</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="d-none d-lg-flex"><a class="scroll-contato" href="#contato-ph3a" data-i18n="menu.contact">Contato</a></li>
+                    <li id="menu-privacy"><a href="/home/privacyportal" data-i18n="menu.privacy">Privacidade</a></li>
+                    <li><a href="https://www.ph3a.com.br/blog" rel="noopener noreferrer" data-i18n="menu.blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="d-flex justify-content-center align-items-center position-relative">
+                <a href="https://www.ph3a.com.br/crm" class="btn-menu-primary" rel="noopener noreferrer" data-i18n="menu.login">Login</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+
+    <section style="background: rgba(0,0,0,0.5);width:100%;position:fixed;top: 0; left: 0; right: 0; z-index: 50;backdrop-filter: blur(10px);" class="d-none">
+
+            <header style="position: relative; top: 0; left: 0; right: 0; z-index: 50;max-width:1000px;margin:0 auto;">
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; ">
+            
+            <!-- Logo -->
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <a href="/" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: white;">
+                <!-- <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #f56565, #ed8936); display: flex; align-items: center; justify-content: center;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 6V12L16 14" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+                    <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"></circle>
+                  </svg>
+                </div>
+                <span style="font-weight: 500;">FocusTimer</span> -->
+
+                <img src="https://www.ph3a.com.br/Content/site/images/logo-ph3.webp" style="height:30px;opacity: .9;">
+                <!-- <img src="https://www.ph3a.com.br/Content/landing/images/logo-white-png.png" style="height:34px;opacity: .5;"> -->
+
+              </a>
+            </div>
+
+            <!-- Navigation -->
+            <!-- <nav style=" align-items: center; gap: 45px;display:flex;">
+              <a href="#features" style="font-size: 14px; color: #d1d5db; text-decoration: none;">Início</a>
+              <a href="#how-it-works" style="font-size: 14px; color: #d1d5db; text-decoration: none;">Produtos</a>
+              <a href="#testimonials" style="font-size: 14px; color: #d1d5db; text-decoration: none;">Privacidade</a>
+              <a href="#pricing" style="font-size: 14px; color: #d1d5db; text-decoration: none;">Blog</a>
+              <a href="#faq" style="font-size: 14px; color: #d1d5db; text-decoration: none;">Contato</a>
+            </nav> -->
+
+            <!-- Button -->
+             <div style="display:flex;">
+                <!-- Navigation -->
+                <nav style=" align-items: center; gap: 45px;display:flex;margin-right:45px;">
+                  <a href="#features" style="font-size: 14px; color: #d1d5db; text-decoration: none;">Início</a>
+                  <a href="#faq" style="font-size: 14px; color: #d1d5db; text-decoration: none;">Contato</a>
+                </nav>
+
+                   <button style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 16px; height: 40px; font-size: 14px; font-weight: 500; color: white; background: linear-gradient(90deg, #f56565, #ed8936); border: none; border-radius: 6px; cursor: pointer;">
+                    Contato
+                  </button>
+             </div>
+         
+
+
+          </div>
+        </header>
+
+  </section>
+
+  
+
+
+        <div class="container" id="wrap-hero-cover">
+            <div class="row text-center justify-content-center mb-3 mb-md-5">
+                <div class="col-md-10 col-lg-8">
+
+
+                    <!-- <h2 data-i18n="home.timeline.title" style="font-family: Poppins;font-size:40px;font-weight: 700;"><img src="https://www.ph3a.com.br/Content/site/images/logo-datatag.png" style="height: 55px;"> </h2>
+                  -->
+
+
+
+
+
+                    <div class="box-v1 text-start text-md-center px-4 px-md-0 will-change-custom animate-appear" style="margin-bottom: 64px;">
+
+
+                    <!-- <h1 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 24px; line-height: 1.2; letter-spacing: -0.025em;">
+                       Aumente suas Vendas <br>
+                      <span style="background: linear-gradient(90deg, #f56565, #ed8936); -webkit-background-clip: text; color: transparent;">
+                        Conheça o novo Datatag
+                      </span>
+                      </h1> -->
+
+
+                        <h1 style="font-size: 32.5px; font-weight: 700; margin-bottom: 24px; line-height: 1.2; letter-spacing: -0.025em;margin-top:-10px;zoom:1.03;">
+                       CONHEÇA O NOVO <br>
+                      <span style="background: linear-gradient(90deg, #f56565, #ed8936); -webkit-background-clip: text; color: transparent;padding-top:2px;display: block;font-size: 45px;letter-spacing: -0.02em;">
+                        DATATAG 2.0
+                      </span>
+                      </h1>
+
+
+
+
+                    <!-- <h1 style="font-size: 33px; font-weight: 700; margin-bottom: 24px; line-height: 1.2; letter-spacing: -0.025em;margin-top:-15px">
+                      <span> Aumente suas Vendas <br></span>
+                   
+
+                      <span style="background: linear-gradient(90deg, #f56565, #ed8936); -webkit-background-clip: text; color: transparent;padding-top:11px;display: block;font-size: 35px;">
+                        Conheça o novo <img src="https://www.ph3a.com.br/Content/site/images/logo-datatag.png" style="height: 48px;margin-left:10px;margin-right:-15px;vertical-align: -12px;">
+                      </span>
+                    </h1> -->
+                    
+                    <p style="color: #9ca3af; font-size: 16px; margin-bottom: 32px; max-width: 530px; margin-left: auto; margin-right: auto;">
+                      Através do DataTag você identifica a persona do seu negócio. Uma visão inteligente do seus clientes em tempo real.
+                    </p>
+                    
+                    <div class="d-flex justify-content-start justify-content-md-center" style=" gap: 16px; ">
+                      
+                      <!-- Watch Demo Button -->
+                      <button style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 16px; height: 40px; font-size: 14px; font-weight: 500; color: white; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); border-radius: 6px; cursor: pointer;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                        </svg>
+                        Assistir Vídeo
+                      </button>
+                      
+                      <!-- Download Now Button -->
+                      <button style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 8px 16px; height: 40px; font-size: 14px; font-weight: 500; color: white; border: none; border-radius: 6px; cursor: pointer; background: linear-gradient(90deg, #f56565, #ed8936);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                          <polyline points="7 10 12 15 17 10"></polyline>
+                          <line x1="12" x2="12" y1="15" y2="3"></line>
+                        </svg>
+                        Mais Detalhes
+                      </button>
+
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- <div class="my-3 dash-divider dash-home"></div>
+                    <p class="pt-2" data-i18n="home.timeline.subtitle">
+                      A PH3A projeta e constrói sistemas de informação direcionados a apoiar a gestão de empresas de diversos segmentos, com soluções para as mais variadas situações de negócios.
+                    </p> -->
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+            <!-- <div class="row text-center justify-content-center pt-2 pb-3">
+                <div class="col-12 pt-4"><a href="/home/about" class="btn-cta" data-i18n="home.timeline.btn_cta">Conheça a PH3A</a></div>
+            </div> -->
+        </div>
+        
+
+
+
+
+     
+
+
+
+
+
+
+
+
+  </div>
+
+     <div style="background-color: #fff;color:#000">
+          <h1>asdsa</h1><br>  <h1>asdsa</h1><br>  <h1>asdsa</h1><br>  <h1>asdsa</h1><br>  <h1>asdsa</h1><br>  <h1>asdsa</h1><br>  <h1>asdsa</h1><br>  <h1>asdsa</h1><br>  <h1>asdsa</h1><br>  <h1>asdsa</h1><br>  <h1>asdsa</h1><br>  <h1>asdsa</h1><br>  <h1>asdsa</h1><br>  <h1>asdsa</h1><br>  <h1>asdsa</h1><br>
+      </div>
+
+</body>
+</html>
